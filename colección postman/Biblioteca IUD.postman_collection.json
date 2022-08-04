@@ -1,0 +1,361 @@
+{
+	"info": {
+		"_postman_id": "eb2f961a-a688-45b4-adfa-521703104786",
+		"name": "Biblioteca IUD",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17467050"
+	},
+	"item": [
+		{
+			"name": "Libro",
+			"item": [
+				{
+					"name": "Guardar libro",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"isbn\": 1,\r\n    \"titulo\": \"El hombre en busca de sentido\",\r\n    \"autor\": \"Victor Frank\",\r\n    \"editorial\": \"Herder Editorial\",\r\n    \"n_paginas\": 162,\r\n    \"formato\": \"Impreso\",\r\n    \"categoria\": {\r\n        \"_id\": \"62eb2fa819d8173a5daef459\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/libro/guardar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"libro",
+								"guardar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar libros",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/libro/listar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"libro",
+								"listar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar libro por id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/libro/62eb3927c1d6a6274867d359",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"libro",
+								"62eb3927c1d6a6274867d359"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar libro",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"isbn\": 1,\r\n        \"titulo\": \"El hombre en busca de sentido\",\r\n        \"autor\": \"Victor Frank\",\r\n        \"editorial\": \"Herder Editorial\",\r\n        \"n_paginas\": 162,\r\n        \"formato\": \"Impreso\",\r\n        \"categoria\": {\r\n            \"_id\": \"62eb2fa819d8173a5daef459\",\r\n            \"nombre\": \"Biografía\",\r\n            \"id\": 1\r\n        }\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/libro/editar/62eb2ff219d8173a5daef45b",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"libro",
+								"editar",
+								"62eb2ff219d8173a5daef45b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar libro",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/libro/eliminar/62eb389469aa1097b52a4a4e",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"libro",
+								"eliminar",
+								"62eb389469aa1097b52a4a4e"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Categoria",
+			"item": [
+				{
+					"name": "Guardar categoria",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"nombre\": \"Biografía\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/categoria/guardar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"categoria",
+								"guardar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar categorias",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/categoria/listar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"categoria",
+								"listar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar categoria por id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/categoria/62eb2fa819d8173a5daef459",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"categoria",
+								"62eb2fa819d8173a5daef459"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar categoria",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Relato\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/categoria/editar/62eb2fa819d8173a5daef459",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"categoria",
+								"editar",
+								"62eb2fa819d8173a5daef459"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar categoria",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/categoria/delete/62eb2fa819d8173a5daef459",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"categoria",
+								"delete",
+								"62eb2fa819d8173a5daef459"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Ejemplar",
+			"item": [
+				{
+					"name": "Guardar ejemplar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "  {\r\n        \"_id\": \"62eb45cbe48a60201caee09d\",\r\n        \"n_edicion\": 4,\r\n        \"libro\": \"62eb40cfe6ed9a05a0bc630e\",\r\n        \"__v\": 0\r\n }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/ejemplar/guardar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"ejemplar",
+								"guardar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar ejemplares",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Listar por ejemplar por id",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar ejemplar",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"_id\": \"62eb470c9202eb5a7a3b1e06\",\r\n    \"n_edicion\": 41,\r\n    \"libro\": {\r\n        \"_id\": \"62eb40cfe6ed9a05a0bc630e\"\r\n    },\r\n    \"__v\": 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/ejemplar/editar/62eb470c9202eb5a7a3b1e06",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"ejemplar",
+								"editar",
+								"62eb470c9202eb5a7a3b1e06"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar ejemplar",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/ejemplar/delete/62eb45cbe48a60201caee09d",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"ejemplar",
+								"delete",
+								"62eb45cbe48a60201caee09d"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
